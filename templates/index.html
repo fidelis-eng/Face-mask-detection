@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="en" >
+	<head>
+        <title>ThinkTeam - Facemask Detection App</title>
+		<meta charset="utf-8">
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css" integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
+        <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+        <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+        <link href={{ url_for('static', filename="css/style.css")}} rel="stylesheet">
+	</head>
+
+    <body>
+        <nav class="navbar navbar-expand-lg navbar-light bg-light">
+            <div class="container-fluid">
+                <a class="navbar-brand px-5 rounded" href="#">
+                    <img src="{{ url_for('static', filename="images/logo TM.png" ) }}" width="100" height="100" alt="">
+                </a>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarNavDropdown">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item px-2">
+                    <a class="nav-link active" aria-current="page" href="#home">Home</a>
+                    </li>
+                    <li class="nav-item px-2">
+                    <a class="nav-link" href="#about">About</a>
+                    </li>
+                    <li class="nav-item px-2">
+                    <a class="nav-link" href="{{ url_for('demo') }}">Demo</a>
+                    </li>
+                    <li class="nav-item px-2">
+                    <a class="nav-link" href="#team">Team</a>
+                    </li>
+                </ul>
+                </div>
+            </div>
+        </nav>
+
+        <section class="hero-v1" id="home">
+            <div class="container">
+                <div class="row align-items-center mt-5">
+                    <div class="col-lg-6 mr-auto text-center text-lg-left">
+                    <span class="d-block subheading">Covid-19 Awareness</span>
+                    <h1 class="heading mb-3">Stay Safe. Stay Home.</h1>
+                    <p class="mb-5">Jaga Iman, Jaga Imun Biar Tetap Aman</p>
+                    <p class="mb-4"><a href="{{ url_for('demo') }}" class="btn btn-primary">Demo</a></p>
+                    </div>
+                    <div class="col-lg-6">
+                    <figure class="illustration">
+                        <img src={{ url_for('static', filename="images/illustration.png") }} alt="Image" class="img-fluid">
+                    </figure>
+                    </div>
+                    <div class="col-lg-6"></div>
+                </div>
+            </div>
+        </section>
+
+        <section class="site-section bg-light" id="about">
+            <div class="container mt-5">
+                <div class="row">
+                <div class="col-lg-6 mb-4 mb-lg-0">
+                    <figure class="img-play-vid">
+                    <img src={{ url_for('static', filename="images/hero_1.jpg")}} alt="Image" class="img-fluid">
+                    </figure>
+                </div>
+                <div class="col-lg-5 ml-auto">
+                    <h2 class="mb-4 section-heading">What is ThinkTeam?</h2>
+                    <p style="text-align: justify;">ThinkTeam adalah suatu aplikasi berbasis website yang dibuat menggunakan Artificial Intelligence 
+                        domain Computer Vision. Aplikasi ini dibuat menggunakan model Deep Learning YOLOV5S dan dideploy menggunakan bahasa pemrograman
+                        Python Framework Flask. ThinkTeam merupakan Alat pendeteksi masker yang otomatis digunakan untuk melakukan pengawasan terhadap 
+                        orang-orang yang memakai masker atau tidak memakainya di area publik. Alat ini membantu dalam memastikan orang-orang memakai masker secara otomatis di publik area </p>
+                    <p><a href="{{ url_for('demo') }}" class="btn btn-primary">Demo</a></p>
+                </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="site-section" id="team">
+            <div class="row mb-3">
+                <div class="col-lg-7 text-center mx-auto">
+                    <h2 class="section-heading">ThinkTeam Member</h2>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-lg-3 col-md-6 col-12 mt-4 pt-2">
+                    <div class="team text-center rounded p-3 py-4">
+                        <img src="{{ url_for('static', filename="images/wafi.jpg" ) }}" class="img-fluid avatar avatar-medium shadow rounded-pill" alt="">
+                        <div class="content mt-3">
+                            <h4 class="title mb-0">M. Wafiyulloh</h4>
+                            <small class="text-muted">Modeling, Evaluasi, Deployment</small>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="col-lg-3 col-md-6 col-12 mt-4 pt-2">
+                    <div class="team text-center rounded p-3 py-4">
+                        <img src="{{ url_for('static', filename="images/zulmi.jpg" ) }}" class="img-fluid avatar avatar-medium shadow rounded-pill" alt="">
+                        <div class="content mt-3">
+                            <h4 class="title mb-0">M. Zulmi Wijiyanto</h4>
+                            <small class="text-muted">Modeling, Evaluasi, Deployment</small>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="col-lg-3 col-md-6 col-12 mt-4 pt-2">
+                    <div class="team text-center rounded p-3 py-4">
+                        <img src="{{ url_for('static', filename="images/ditta.jpg" ) }}" class="img-fluid avatar avatar-medium shadow rounded-pill" alt="">
+                        <div class="content mt-3">
+                            <h4 class="title mb-0">Ditta Astriani Larassati</h4>
+                            <small class="text-muted">Modeling, Evaluasi, Deployment</small>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="col-lg-3 col-md-6 col-12 mt-4 pt-2">
+                    <div class="team text-center rounded p-3 py-4">
+                        <img src="{{  url_for('static', filename="images/martina.jpg" ) }}" class="img-fluid avatar avatar-medium shadow rounded-pill" alt="">
+                        <div class="content mt-3">
+                            <h4 class="title mb-0">Martina Pardede</h4>
+                            <small class="text-muted">Modeling, Evaluasi, Deployment</small>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <div class="site-footer">
+            <div class="container">
+                <div class="row text-center">
+                <div class="col-md-12">
+                    <div class="border-top pt-5">
+                    <p class="copyright"><small>
+                        <!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. -->
+                        Copyright &copy;<script>document.write(new Date().getFullYear());</script> All rights reserved | This template is made with <i class="icon-heart text-danger" aria-hidden="true"></i> by <a href="https://colorlib.com" target="_blank" >Colorlib</a>
+                        <!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. --></small></p>
+                    </div>
+                    </div>
+                </div>
+                </div>
+            </div>
+        </div>
+
+    </body>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
+    crossorigin="anonymous"></script>
+</body>
+</html>
